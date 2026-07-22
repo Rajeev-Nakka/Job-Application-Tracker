@@ -1,4 +1,4 @@
-{
+sf schema generate --type=object{
   "orgName": "Demo company",
   "edition": "Developer",
   "features": ["EnableSetPasswordInApi"],
