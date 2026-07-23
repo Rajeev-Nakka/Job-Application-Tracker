@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>RecruitingTrackerReports/Recruiting_Tracker_Reports</members>
+        <members>RecruitingTrackerReports/Upcoming_FollowUps_Skj</members>
+        <members>RecruitingTrackerReports/Stale_Applications_iVd</members>
+        <members>RecruitingTrackerReports/Recruiting_Tracker_Reports_kg0</members>
+        <members>RecruitingTrackerReports/Outcomes_Funnel_oZc</members>
+        <name>Report</name>
+    </types>
+    <types>
+        <members>RecruitingTrackerReports/QubEjTdczXUAFyxaIIYjrOGfTVoaHy</members>
+        <name>Dashboard</name>
+    </types>
+    <version>61.0</version>
+</Package>

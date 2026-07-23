@@ -1,0 +1,53 @@
+<template>
+    <lightning-card title="Job Application Kanban" icon-name="standard:opportunity">
+        <div class="slds-p-around_medium">
+
+            <template if:true={error}>
+                <p class="slds-text-color_error">Error loading applications.</p>
+            </template>
+
+            <div class="slds-grid slds-wrap slds-gutters">
+                <template for:each={columns} for:item="column">
+                    <div key={column.stage} class="slds-col slds-size_1-of-5">
+                        <div
+                            class="slds-box slds-theme_shade slds-m-bottom_small"
+                            data-stage={column.stage}
+                            ondragover={handleDragOver}
+                            ondrop={handleDrop}
+                        >
+                            <h3 class="slds-text-heading_small slds-align_absolute-center">
+                                {column.label} ({column.apps.length})
+                            </h3>
+                        </div>
+
+                        <div
+                            class="slds-p-around_xx-small"
+                            data-stage={column.stage}
+                            ondragover={handleDragOver}
+                            ondrop={handleDrop}
+                            style="min-height: 200px;"
+                        >
+                            <template for:each={column.apps} for:item="app">
+                                <div
+                                    key={app.Id}
+                                    data-id={app.Id}
+                                    draggable="true"
+                                    ondragstart={handleDragStart}
+                                    class="slds-box slds-box_x-small slds-m-bottom_x-small slds-theme_default"
+                                    style="cursor: grab;"
+                                >
+                                    <p class="slds-text-heading_small">{app.Name}</p>
+                                    <p class="slds-text-body_small">{app.Role_c__c}</p>
+                                    <template if:true={app.Follow_Up_Date__c}>
+                                        <p class="slds-text-body_small">Follow up: {app.Follow_Up_Date__c}</p>
+                                    </template>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>

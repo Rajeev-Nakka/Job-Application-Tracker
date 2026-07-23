@@ -44,4 +44,36 @@ private class JobApplicationServiceTest {
 
         System.assertEquals(0, results.size(), 'No applications exist, so the result should be empty');
     }
+
+    @isTest
+    static void testGetAllApplications_returnsAllRecords() {
+        insert new Job_Application__c(
+            Name = 'Stripe',
+            Status__c = 'Saved',
+            Applied_Date__c = Date.today()
+        );
+
+        Test.startTest();
+        List<Job_Application__c> results = JobApplicationService.getAllApplications();
+        Test.stopTest();
+
+        System.assertEquals(1, results.size(), 'Should return the one inserted application');
+    }
+
+    @isTest
+    static void testUpdateStatus_changesStatusField() {
+        Job_Application__c app = new Job_Application__c(
+            Name = 'Salesforce',
+            Status__c = 'Saved',
+            Applied_Date__c = Date.today()
+        );
+        insert app;
+
+        Test.startTest();
+        JobApplicationService.updateStatus(app.Id, 'Applied');
+        Test.stopTest();
+
+        Job_Application__c updated = [SELECT Status__c FROM Job_Application__c WHERE Id = :app.Id];
+        System.assertEquals('Applied', updated.Status__c, 'Status should be updated to Applied');
+    }
 }
