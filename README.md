@@ -92,14 +92,9 @@ force-app/main/default/
 5. Open the org: `sf org open --target-org tracker-org`
 6. Launch the **Job Tracker** app from the App Launcher
 
-<<<<<<< HEAD
 ## Screenshots
 
-As a Seperate Folder With Name ScreenShots
- 
-=======
-
->>>>>>> 8f4688dbc0d4023ca91cf058cacd987c6db47b57
+for this it have separate folder  with name ScreenShots
 
 ## Future Scope
 
@@ -110,16 +105,8 @@ As a Seperate Folder With Name ScreenShots
 
 ## Author
 
-<<<<<<< HEAD
 Rajeev Nakka — IT/CSE undergraduate, built while actively applying to internships including Stripe and Salesforce.
 
 ## License
 
 MIT License — see [LICENSE](LICENSE)
-=======
-Rajeev Nakka — IT/CS undergraduate, built while actively applying to internships including Stripe and Salesforce.
-
-## License
-
-MIT License — see [LICENSE](LICENSE)
->>>>>>> 8f4688dbc0d4023ca91cf058cacd987c6db47b57
