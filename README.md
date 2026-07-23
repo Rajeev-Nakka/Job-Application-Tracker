@@ -92,9 +92,7 @@ force-app/main/default/
 5. Open the org: `sf org open --target-org tracker-org`
 6. Launch the **Job Tracker** app from the App Launcher
 
-## Screenshots
 
-_Add screenshots of the Kanban board and dashboard here._
 
 ## Future Scope
 
